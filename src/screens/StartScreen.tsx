@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {useThemeMode} from '@rneui/themed';
 
 // components
@@ -13,7 +14,8 @@ import DarkChair from 'assets/images/darkChair.jpg';
 type Props = NativeStackScreenProps<RootStackType, 'StartScreen'>;
 
 const StartScreen: React.FC<Props> = ({navigation}) => {
-  const {mode, setMode} = useThemeMode();
+  const {mode} = useThemeMode();
+  const {bottom} = useSafeAreaInsets();
 
   return (
     <Wrapper>
@@ -21,7 +23,7 @@ const StartScreen: React.FC<Props> = ({navigation}) => {
       <PrimaryBtn
         text="Get Started"
         onPress={() => navigation.navigate('BottomTabs')}
-        btnStyle={{marginBottom: 20, marginHorizontal: 20}}
+        btnStyle={{marginBottom: bottom || 20, marginHorizontal: 20}}
       />
     </Wrapper>
   );
