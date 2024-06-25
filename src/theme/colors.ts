@@ -3,6 +3,7 @@ const light = {
   white: '#FFFFFF',
   black: '#000000',
   primary: '#2C4939',
+  grey0: '#999999',
 };
 
 const dark = {
@@ -10,6 +11,7 @@ const dark = {
   white: '#000000',
   black: '#FFFFFF',
   primary: '#d2f72a',
+  grey0: '#999999',
 };
 
 export {light, dark};
