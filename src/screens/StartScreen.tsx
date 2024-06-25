@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
-import {useNavigation} from '@react-navigation/native';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {useThemeMode} from '@rneui/themed';
 
 // components
@@ -10,8 +10,9 @@ import {PrimaryBtn} from 'components';
 import Chair from 'assets/images/chair.jpg';
 import DarkChair from 'assets/images/darkChair.jpg';
 
-const StartScreen = () => {
-  const {navigate} = useNavigation();
+type Props = NativeStackScreenProps<RootStackType, 'StartScreen'>;
+
+const StartScreen: React.FC<Props> = ({navigation}) => {
   const {mode, setMode} = useThemeMode();
 
   return (
@@ -19,7 +20,7 @@ const StartScreen = () => {
       <Image source={mode === 'light' ? Chair : DarkChair} />
       <PrimaryBtn
         text="Get Started"
-        onPress={() => navigate('BottomTabs')}
+        onPress={() => navigation.navigate('BottomTabs')}
         btnStyle={{marginBottom: 20, marginHorizontal: 20}}
       />
     </Wrapper>
