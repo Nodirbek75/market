@@ -1,3 +1,4 @@
 import PrimaryList from './PrimaryList';
+import CategoryList from './CategoryList';
 
-export {PrimaryList};
+export {PrimaryList, CategoryList};
