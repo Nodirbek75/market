@@ -49,7 +49,7 @@ const PrimaryList = () => {
       data={dummyData}
       renderItem={renderItemHandler}
       numColumns={2}
-      style={{paddingHorizontal: 10}}
+      style={{paddingHorizontal: 10, paddingTop: 10}}
     />
   );
 };

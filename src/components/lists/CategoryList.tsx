@@ -32,6 +32,4 @@ const CategoryList = () => {
 
 export default CategoryList;
 
-const Wrapper = styled.ScrollView`
-  margin-bottom: 10px;
-`;
+const Wrapper = styled.ScrollView``;
