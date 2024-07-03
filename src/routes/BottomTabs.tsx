@@ -36,7 +36,6 @@ const BottomTabs = () => {
     <Tab.Navigator
       screenOptions={({route}) => ({
         headerTitle: '',
-        headerShown: false,
         headerShadowVisible: false,
         headerStyle: {backgroundColor: '#FFF5ED'},
         tabBarStyle: {
