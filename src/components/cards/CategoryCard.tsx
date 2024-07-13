@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/native';
 import {Colors, useTheme} from '@rneui/themed';
-import Icon from 'react-native-vector-icons/FontAwesome6';
 
 type Props = {
   title: string;
@@ -24,9 +23,8 @@ const CategoryCard: React.FC<Props> = ({
     <Wrapper onPress={onPress} last={last}>
       <IconWrapper colors={colors} selected={selected}>
         <Icon
-          name={icon}
-          size={22}
-          color={selected ? colors.white : colors.grey1}
+          source={icon as any}
+          tintColor={selected ? colors.white : colors.grey0}
         />
       </IconWrapper>
       <Title colors={colors} selected={selected}>
@@ -54,6 +52,12 @@ const IconWrapper = styled.View<{colors: Colors; selected: boolean}>`
   margin-bottom: 5px;
   background-color: ${({colors, selected}) =>
     selected ? colors.primary : colors.white1};
+`;
+
+const Icon = styled.Image`
+  width: 22px;
+  height: 22px;
+  color: red;
 `;
 
 const Title = styled.Text<{colors: Colors; selected: boolean}>`

@@ -5,13 +5,13 @@ import styled from 'styled-components/native';
 import {CategoryCard} from 'components/cards';
 
 const category = [
-  {key: 'popular', title: 'Popular', icon: 'star'},
-  {key: 'chair', title: 'Chair', icon: 'chair'},
-  {key: 'table', title: 'Table', icon: 'table'},
-  {key: 'armchair', title: 'Armchair', icon: 'couch'},
-  {key: 'bed', title: 'Bed', icon: 'bed'},
-  {key: 'lamp', title: 'Lamp', icon: 'lamp'},
-  {key: 'wooden', title: 'Wooden', icon: 'wood'},
+  {key: 'popular', title: 'Popular', icon: require('assets/icons/star.svg')},
+  {key: 'chair', title: 'Chair', icon: require('assets/icons/chair.svg')},
+  {key: 'table', title: 'Table', icon: require('assets/icons/table.svg')},
+  {key: 'armchair', title: 'Armchair', icon: require('assets/icons/sofa.svg')},
+  {key: 'bed', title: 'Bed', icon: require('assets/icons/bed.svg')},
+  {key: 'lamp', title: 'Lamp', icon: require('assets/icons/lamp.svg')},
+  {key: 'cabinet', title: 'Cabinet', icon: require('assets/icons/cabinet.svg')},
 ];
 
 const CategoryList = () => {
